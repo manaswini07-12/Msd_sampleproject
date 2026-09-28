@@ -1,0 +1,26 @@
+{
+  "name": "msd_sampleproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manaswini07-12/Msd_sampleproject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/manaswini07-12/Msd_sampleproject/issues"
+  },
+  "homepage": "https://github.com/manaswini07-12/Msd_sampleproject#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.2"
+  }
+}

@@ -13,13 +13,21 @@ router.post("/register",async (req,res)=>{
 })
 router.post("/login",async(req,res)=>{
     let data=req.body;
-    let emailcheck=await users.findOne({emailid:data.emailid})
+    let emailcheck=await users.findOne({email:data.email})
     if(emailcheck){
         let passcheck=await bcrypt.compare(data.password,emailcheck.password);
         if(passcheck){
-    res.send("login successfull");
+    res.send({"msg":"login successfull",
+        "user":{
+            _id:emailcheck.id,
+            name:emailcheck.name,
+            email:emailcheck.email,
+            role:emailcheck.role,
+
+        }
+         } );
 }else{
-    res.send("password wrong")
+    res.send({"msg":"password wrong"})
 }
     }else{
         res.send("user not found");

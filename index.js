@@ -1,4 +1,5 @@
 let express=require('express');
+let cors=require('cors');
 let app=express();
 let mongoose=require('mongoose');
 let emproutes=require('./routes/emp_route');
@@ -6,6 +7,7 @@ mongoose.connect("mongodb://localhost:27017/hrmanagement").then(()=>console.log(
 ).catch((err)=>console.log(err))
 app.use(express.json());
 let hrroutes=require('./routes/hr_route');
+app.use(cors());
 
 //localhost:3000/api/emp/register=>post
 //localhost:3000/api/emp/login=>post
